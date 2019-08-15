@@ -1,29 +1,13 @@
-# lubi
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
+#运行
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+#打包
 npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
+#应用技术
+vuex
+vue-router-dom
+json-server
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+拉取后各自建立各自的分支,不有在主分支(master)上写东西,后面再合并推送
