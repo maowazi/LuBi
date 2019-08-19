@@ -1,14 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <div>
-        <h1>home首页 显示底部按钮以及四个角的圆按钮</h1>
-        <div><router-link to="/home/serch">搜索</router-link></div>
-        <div><router-link to="/home/calendar">日历</router-link></div>
-        <div><router-link to="/home/mine">我的</router-link></div>
-        <div><router-link to="/home/add">添加</router-link></div>
-        <router-view></router-view>
-
-=======
     <div class="home">
         <div>
             <div><router-link to="/home/serch"></router-link></div>
@@ -48,15 +38,10 @@
         </div>
         <div class="xian"></div>
         <router-view class="homechildren"></router-view>
->>>>>>> 6c30b18a85d89663771bd25c76ff2e915c214a1f
     </div>
 
 </template>
 <script>
-<<<<<<< HEAD
-export default {    
-    name:"Home",
-=======
 export default {
     name:"Home",
     data() {
@@ -72,7 +57,6 @@ export default {
         let daymarr = ["日","一","二","三","四","五","六"]
         this.datestr = `${muntd}/${day} (周${daymarr[daym]})`
     },
->>>>>>> 6c30b18a85d89663771bd25c76ff2e915c214a1f
 }
 </script>
 <style lang="scss" scoped>
