@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="tab">
         <ol>
             <router-link v-for="item in tabList" :key="item.id" :to="item.path" tag="li" :class="item.class">
@@ -25,7 +25,6 @@ export default {
 <style lang="scss" scoped>
     .tab{
         position: fixed;
-        background: #fff;
         height: .35rem;
         left: 0;
         bottom: 0;

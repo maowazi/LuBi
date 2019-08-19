@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-body,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure,figcaption{margin:0;padding:0}
+body,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure,figcaption,img{margin:0;padding:0}
 
 body,html{
 	font: .12rem "宋体","微软雅黑",Arial;
@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6,b,strong{
 	font-weight:normal;
 	font-size:100%;	
 }
-i,em{
+i,em,img{
 	font-style:normal;	
 }
 li{
