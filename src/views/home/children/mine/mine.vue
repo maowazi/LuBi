@@ -18,7 +18,6 @@
                 <p>立即手动同步</p>
               </div>
               <div class="icon"></div>
-              
             </div>
           </div>
         </li>

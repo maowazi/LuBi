@@ -25,7 +25,6 @@ export default {
 <style lang="scss" scoped>
     .tab{
         position: fixed;
-        background: #fff;
         height: .35rem;
         left: 0;
         bottom: 0;
