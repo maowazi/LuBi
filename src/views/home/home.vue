@@ -6,11 +6,13 @@
         <div><router-link to="/home/mine">我的</router-link></div>
         <div><router-link to="/home/add">添加</router-link></div>
         <router-view></router-view>
+
     </div>
+
 </template>
 <script>
-export default {
-    name:"Home"
+export default {    
+    name:"Home",
 }
 </script>
 <style lang="scss" scoped>

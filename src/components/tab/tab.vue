@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="tab">
         <ol>
             <router-link v-for="item in tabList" :key="item.id" :to="item.path" tag="li" :class="item.class">
