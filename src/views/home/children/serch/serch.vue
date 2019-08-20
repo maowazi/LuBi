@@ -7,7 +7,7 @@
             </router-link>
             <div>取消</div>
         </div>
-        <el-calendar v-model="value" class="rili"></el-calendar>
+         <Kalendar />
         <router-view></router-view>
     </div>
 </template>
@@ -47,7 +47,5 @@ export default {
         }
     }
 }
-.rili{
-    height: 2rem;
-}
+
 </style>
