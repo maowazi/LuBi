@@ -48,7 +48,7 @@ export default {
             let target = e.target || e.srcElement;
             console.log(target)
             if(target.className === "ldq-tbody-li"){
-                onclose.log(target)
+                console.log(target)
             }
         }
     },

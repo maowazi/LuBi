@@ -60,10 +60,7 @@ export default {
   left: 0;
   bottom: 0;
   top: 0;
-  // display: flex;
-  // justify-content: space-between;
-  // flex-direction: column;
-  > :first-child {
+    > :first-child {
     display: flex;
     margin-top: 0.4rem;
     justify-content: space-between;
@@ -109,9 +106,6 @@ export default {
 </style>
 <style lang="scss">
 #ldq-kalendar[data-v-712e38dc] {
-  // color: #1f1f1f;
-  // text-align: center;
-  // border-radius: 5px;
   box-shadow: none;
   // overflow: hidden;
   // padding: 10px 5px;
@@ -126,7 +120,6 @@ export default {
   list-style: disc;
   line-height: 0.2rem;
   font-size: 0.14rem;
-  // height:.3rem;
 }
 .task ul .task-item span {
   width: 0.1rem;
@@ -135,11 +128,9 @@ export default {
   background: #757575;
   border-radius: 50%;
   margin: 0 0.1rem;
-  // border:black .1rem solid;
 }
 .task ul .border-top {
-  border-top: #bbbbbb solid 0.01rem;
-
-  // background: rebeccapurple;
+  border-top: #bbb solid 0.01rem;
 }
+
 </style>
