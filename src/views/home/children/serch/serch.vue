@@ -7,8 +7,7 @@
             </router-link>
             <div>取消</div>
         </div>
-         <!-- <Kalendar  class="rili"/> -->
-         <el-calendar v-model="value"></el-calendar>
+         <Kalendar  class="rili"/>
         <router-view></router-view>
     </div>
 </template>
@@ -21,18 +20,7 @@ export default {
         }
     },
     mounted() {
-        let el_button = document.querySelectorAll(".el-button");
-        el_button[0].children[0].innerHTML = `<i class="iconfont icon-zuojiantou"></i>`;
-        el_button[2].children[0].innerHTML = `<i class="iconfont icon-youjiantou"></i>`;
-        let el_calendar__title = document.querySelector(".el-calendar__title");
-        let newel_calendar__title = el_calendar__title.cloneNode(true);
-        el_calendar__title.remove();
-        let date = new Date();
-        let yer = date.getFullYear();
-        let muntd = date.getMonth()+1;
-
-        let datestr = `${muntd}月${yer}`;
-        el_button[1].children[0].innerHTML = datestr;
+        
     },
 }
 </script>
@@ -59,6 +47,7 @@ export default {
         color: #EAEAEA ;
         i{
             margin-right: .1rem;
+            font-size: .14rem;
         }
     }
 }
@@ -112,69 +101,4 @@ export default {
         }
     } 
 }
-
-
-//element日历
-.el-calendar{
-    background-color:#ccc;
-    *{
-        border: 0;
-    }
-    
-    .el-calendar__header{
-        padding: 0rem 0rem;
-        display: flex;
-        justify-content: center;
-        .el-calendar__button-group{
-            width: 100%;
-            .el-button-group{
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-            }
-            *{
-                background:none;
-            }
-            i{
-                font-size: .12rem;
-            }
-        }
-    } 
-    .el-calendar__body{
-        padding: .05rem .15rem;
-        .el-calendar-table{
-            th{
-                font-size: .16rem;
-            }
-            tbody{
-                *{
-                    border: 0;
-                }
-                div{
-                    padding: 0;
-                    width: .3rem;
-                    height: .3rem;
-                    text-align: center;
-                    line-height: .3rem;
-                }
-                .prev{
-                    opacity: 0;
-                }
-                .next{
-                    opacity: 0;
-                }
-                .current.is-selected{
-                    background: none;
-                    div{
-                    background: none;
-                        border-radius: 50%;
-                        border: 1px solid #000;
-                    }
-                    
-                }
-            }
-        }
-    }
-}
-
 </style>
