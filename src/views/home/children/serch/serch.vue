@@ -104,6 +104,7 @@ export default {
         color: #EAEAEA ;
         i{
             margin-right: .1rem;
+            font-size: .14rem;
         }
     }
 }
@@ -157,5 +158,4 @@ export default {
         }
     } 
 }
-
 </style>
