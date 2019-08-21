@@ -5,11 +5,26 @@
                 <i class="iconfont icon-fangdajing"></i>
                 <span>试试搜索"二月":)</span>
             </router-link>
-            <div>取消</div>
+            <div v-on:click="handBack">取消</div>
         </div>
-         <!-- <Kalendar  class="rili"/> -->
-         <el-calendar v-model="value"></el-calendar>
-        <router-view></router-view>
+         <Kalendar  class="rili"/>
+        <div class="MemoList">
+            <ul>
+                <li>
+                    <span></span>
+                    <p>今天约饭</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>今天钓鱼</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>今天遛狗</p>
+                </li>
+            </ul>
+        </div>
+        <router-view class="serchOrder"></router-view>
     </div>
 </template>
 <script>
@@ -20,25 +35,55 @@ export default {
             value: new Date()
         }
     },
+    methods: {
+        handBack(){
+            this.$router.back();
+        }
+    },
     mounted() {
-        let el_button = document.querySelectorAll(".el-button");
-        el_button[0].children[0].innerHTML = `<i class="iconfont icon-zuojiantou"></i>`;
-        el_button[2].children[0].innerHTML = `<i class="iconfont icon-youjiantou"></i>`;
-        let el_calendar__title = document.querySelector(".el-calendar__title");
-        let newel_calendar__title = el_calendar__title.cloneNode(true);
-        el_calendar__title.remove();
-        let date = new Date();
-        let yer = date.getFullYear();
-        let muntd = date.getMonth()+1;
-
-        let datestr = `${muntd}月${yer}`;
-        el_button[1].children[0].innerHTML = datestr;
+        console.log(document.querySelectorAll(".ldq-tbody-li")[3].className)
+        let ldq_tbody = document.querySelector(".ldq-tbody");
+        ldq_tbody.onclick = (eve)=>{
+            let e = eve || event;
+            let target = e.target || e.srcElement;
+            console.log(target)
+            if(target.className === "ldq-tbody-li"){
+                onclose.log(target)
+            }
+        }
     },
 }
 </script>
 <style lang="scss" scoped>
 .serch{
     background: #BBBBBB ;
+    .MemoList{
+        ul{
+            border-top: 1px solid #aaa;
+            li{
+                display: flex;
+                height: .5rem;
+                align-items: center;
+                border-bottom: 1px solid #AAAAAA;
+                padding-left: .4rem;
+                span{
+                    width: .1rem;
+                    height: .1rem;
+                    background: #000;
+                    border-radius: 50%;
+                    margin-right: .2rem;
+                }
+            }
+        }
+    }
+    .serchOrder{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: #EAEAEA;
+    }
 }
 .serchHeader{
     display: flex;
@@ -111,70 +156,6 @@ export default {
             font-size: .16rem;
         }
     } 
-}
-
-
-//element日历
-.el-calendar{
-    background-color:#ccc;
-    *{
-        border: 0;
-    }
-    
-    .el-calendar__header{
-        padding: 0rem 0rem;
-        display: flex;
-        justify-content: center;
-        .el-calendar__button-group{
-            width: 100%;
-            .el-button-group{
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-            }
-            *{
-                background:none;
-            }
-            i{
-                font-size: .12rem;
-            }
-        }
-    } 
-    .el-calendar__body{
-        padding: .05rem .15rem;
-        .el-calendar-table{
-            th{
-                font-size: .16rem;
-            }
-            tbody{
-                *{
-                    border: 0;
-                }
-                div{
-                    padding: 0;
-                    width: .3rem;
-                    height: .3rem;
-                    text-align: center;
-                    line-height: .3rem;
-                }
-                .prev{
-                    opacity: 0;
-                }
-                .next{
-                    opacity: 0;
-                }
-                .current.is-selected{
-                    background: none;
-                    div{
-                    background: none;
-                        border-radius: 50%;
-                        border: 1px solid #000;
-                    }
-                    
-                }
-            }
-        }
-    }
 }
 
 </style>
