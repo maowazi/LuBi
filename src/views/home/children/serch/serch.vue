@@ -41,14 +41,14 @@ export default {
         }
     },
     mounted() {
-        console.log(document.querySelectorAll(".ldq-tbody-li")[3].className)
         let ldq_tbody = document.querySelector(".ldq-tbody");
         ldq_tbody.onclick = (eve)=>{
             let e = eve || event;
             let target = e.target || e.srcElement;
-            console.log(target)
-            if(target.className === "ldq-tbody-li"){
-                console.log(target)
+            let ldq_tnav = document.querySelector(".ldq-tnav").children;
+            if(target.parentNode.className === "ldq-tbody-li"){
+                console.log(ldq_tnav[1].innerText);
+                console.log(target.innerText);
             }
         }
     },
